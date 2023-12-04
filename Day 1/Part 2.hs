@@ -25,6 +25,7 @@ lastDigit a = firstDigit (reverse a)
 
 calibrationValue :: [Char] -> Integer
 calibrationValue a = read (firstDigit (wordsToDigits a) : [lastDigit (wordsToDigits a)]) :: Integer
+
 main :: IO() = do
     handle <- openFile "input.txt" ReadMode
     fileContents <- hGetContents handle
